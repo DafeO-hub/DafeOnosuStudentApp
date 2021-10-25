@@ -7,11 +7,11 @@ Implement CRUD operations with a students DB which is a full stack arctitceture 
 <li>Frontend Architecture</li>
 
 ## Solution
-The project created followed Objected Oriented principles. It made used  of Entitty framework, NUnit testing,  Separation of concerns, the frontend was built independently from the backend. Connected to the SQLite database to perfornm CRUD operations.
+The project created followed Objected Oriented principles. It made used  of Entitty framework, Logger, CORS, NUnit testing,  Separation of concerns, the frontend was built independently from the backend. Connected to the SQLite database to perfornm CRUD operations.
 
 ## Built with
 Angular version 11 and above was used for the frontend <br />
-ASP .Net 3.1 the backend to accomodate visual studio 17
+ASP .Net 3.1 the backend to accomodate visual studio 17 <br />
 Bootstrap
 
 ## Getting started
