@@ -7,7 +7,7 @@ Implement CRUD operations with a students DB which is a full stack arctitceture 
 <li>Frontend Architecture</li>
 
 ## Solution
-Login page was created.
+The project created followed Objected Oriented principles. It made used  of Entitty framework, NUnit testing,  Separation of concerns, the frontend was built independently from the backend. Connected to the SQLite database to perfornm CRUD operations.
 
 ## Built with
 Angular version 11 and above was used for the frontend <br />
