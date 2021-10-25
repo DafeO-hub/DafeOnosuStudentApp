@@ -1,0 +1,59 @@
+<div class="bg-white">
+    <div class="d-flex w-100 ml-3 mr-3">
+        <h1>{{isNew? 'Create Record' : 'Edit Record'}}</h1>
+    </div>
+</div>
+
+<div class="w-50 ml-3 mr-3">
+    <form class="needs-validation" novalidate>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom01">First name</label>
+                <input type="text" class="form-control" id="firstname-field" [(ngModel)]="student.FirstName"
+                    [ngModelOptions]="{standalone: true}" value="{{student?.FirstName}}" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="lastname-field" [(ngModel)]="student.LastName"
+                [ngModelOptions]="{standalone: true}" value="{{student?.LastName}}" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Age</label>
+                <input type="number" class="form-control" id="age-field" [(ngModel)]="student.Age"
+                [ngModelOptions]="{standalone: true}" value="{{student?.Age}}" required>
+                <div class="invalid-feedback">
+                    Please provide age.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom05">Career</label>
+                <input type="text" class="form-control" id="career-field" [(ngModel)]="student.Career"
+                [ngModelOptions]="{standalone: true}" value="{{student?.Career}}" required>
+                <div class="invalid-feedback">
+                    Please provide career.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="w-100 mb-3">
+                <label for="validationCustom03">Username</label>
+                <input type="text" class="form-control" id="age-field" [(ngModel)]="student.Username"
+                [ngModelOptions]="{standalone: true}" value="{{student?.Username}}" required>
+                <div class="invalid-feedback">
+                    Please provide username.
+                </div>
+            </div>
+        </div>
+        <button *ngIf="isNew" (click)="create()" class="btn btn-primary mr-2" type="submit">Create</button>
+        <button *ngIf="!isNew" (click)="update()" class="btn btn-primary mr-2" type="submit">Update</button>
+        <a class="btn btn-light" type="submit" routerLink="/students">Cancel</a>
+    </form>
+</div>

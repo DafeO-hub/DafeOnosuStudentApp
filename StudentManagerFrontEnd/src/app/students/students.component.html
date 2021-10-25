@@ -1,0 +1,60 @@
+<div class="bg-white">
+    <div class="d-flex w-100 ml-3 mr-3">
+        <h1>Student Management System</h1>
+    </div>
+</div>
+
+<section class="m-0 p-0">
+    <div class="ml-3 mr-3 pl-0 pr-0">
+        <div class="w-75">
+            <table class="w-100 table table-hover font-size-13px">
+                <thead class="border-top-0">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Career</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="((students != null) && (students?.length > 0))">
+                    <tr class="cursor-pointer" id="datagrid-row-{{row.Id}}"
+                        *ngFor="let row of students; index as i">
+                        <th scope="row">{{row.Id}}</th>
+                        <td>{{row.FirstName}}</td>
+                        <td>{{row.LastName}}</td>
+                        <td>{{row.Age}}</td>
+                        <td>{{row.Career}}</td>
+                        <td>
+                            <button type="button" class="btn btn-warning btn-sm p-1 pl-2 pr-2 mt-0 ml-0 mb-0 mr-2" (click)="editStudent($event, row.Id)">Edit</button>
+                            <button type="button" class="btn btn-danger btn-sm p-1 pl-2 pr-2 m-0" (click)="deleteStudent($event, row.Id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody *ngIf="((students == null) || (students?.length <= 0))">
+                    <td class="d-flex align-items-center height-400px" colspan="5">
+                        <div class="text-center mx-auto">
+                            <div class="illust illust-150 file-searching-illust"></div>
+                            <div class="text-center mx-auto">No records found.</div>
+                        </div>
+                    </td>
+                </tbody>
+            </table>
+
+            <div class="min-width-250px">
+                <div class="m-0 d-flex justify-content-start">
+                    <button type="button" class="d-flex btn btn-primary border-0 shadow-none mb-0 mr-2 p-1 pl-2 pr-2"
+                        (click)="generateDownloadCSV($event)">
+                        <div class="icon icon-16 add-black-icon m-0">Download CSV</div>
+                    </button>
+
+                    <button type="button" class="d-flex btn btn-success border-0 shadow-none mb-0 p-1 pl-2 pr-2"
+                        (click)="addStudent($event)">
+                        <div class="icon icon-16 delete-black-icon m-0">Add Item</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

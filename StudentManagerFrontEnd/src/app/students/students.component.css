@@ -1,0 +1,20 @@
+
+.datagrid-toolbar {
+    position: fixed;
+    top: 75px;
+    left: 446px;
+    right: 0px;
+    background-color: #ffffff !important;
+    z-index: 1000;
+}
+
+.datagrid-list {
+    position: fixed;
+    top: 124px;
+    left: 510px;
+    right: 0px;
+    bottom: 0px;
+
+    overflow: hidden;
+    overflow-y: auto;
+}
