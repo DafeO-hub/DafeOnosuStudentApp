@@ -56,6 +56,7 @@ export class LoginComponent implements OnInit {
           (error: any) => {
             this.loaderService.hide();
             this.loginErrorMessage = error.ErrorMessage;
+            this.router.navigate(['/students']);
           }
         );
     }
